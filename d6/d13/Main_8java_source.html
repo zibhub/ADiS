@@ -111,44 +111,44 @@ function toggleVisibility(linkObj) {
 <a name="l00013"></a>00013 <span class="comment"> * limitations under the License.</span>
 <a name="l00014"></a>00014 <span class="comment"> */</span>
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="keyword">package </span>de.zib.adis;
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">import</span> com.beust.jcommander.Parameter;
-<a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="keyword">import</span> de.zib.adis.abi.ABI;
-<a name="l00021"></a>00021 <span class="keyword">import</span> de.zib.adis.abi.ABIi;
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="keyword">public</span> <span class="keyword">class </span>Main <span class="keyword">extends</span> ABI {
-<a name="l00024"></a>00024     @Parameter( names = { <span class="stringliteral">&quot;--baseurl&quot;</span>, <span class="stringliteral">&quot;-b&quot;</span> }, description = <span class="stringliteral">&quot;Base URL of VolD database&quot;</span>, required = true )
-<a name="l00025"></a>00025     <span class="keyword">private</span> String voldURL;
-<a name="l00026"></a>00026 
-<a name="l00027"></a>00027     @Parameter( names = { <span class="stringliteral">&quot;--grid&quot;</span>, <span class="stringliteral">&quot;-g&quot;</span> }, description = <span class="stringliteral">&quot;Grid name&quot;</span> )
-<a name="l00028"></a>00028     <span class="keyword">private</span> String grid = <span class="stringliteral">&quot;c3grid&quot;</span>;
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030     @Parameter( names = { <span class="stringliteral">&quot;--enc&quot;</span>, <span class="stringliteral">&quot;-e&quot;</span> }, description = <span class="stringliteral">&quot;Encoding&quot;</span> )
-<a name="l00031"></a>00031     <span class="keyword">private</span> String enc = <span class="stringliteral">&quot;utf-8&quot;</span>;
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033     <span class="keyword">private</span> Main( ABIi iface, String[] args ) {
-<a name="l00034"></a>00034         super( iface, args );
-<a name="l00035"></a>00035     }
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037     <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> main( String[] args ) {
-<a name="l00038"></a>00038         Adis adis = <span class="keyword">new</span> Adis();
-<a name="l00039"></a>00039         Main main = <span class="keyword">new</span> Main( adis, args );
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041         adis.setVoldURL( main.voldURL );
-<a name="l00042"></a>00042         adis.setEnc( main.enc );
-<a name="l00043"></a>00043         adis.setGrid( main.grid );
+<a name="l00041"></a>00041 <span class="keyword">package </span>de.zib.adis;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="keyword">import</span> com.beust.jcommander.Parameter;
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045         main.invoke();
-<a name="l00046"></a>00046     }
-<a name="l00047"></a>00047 }
+<a name="l00045"></a>00045 <span class="keyword">import</span> de.zib.adis.abi.ABI;
+<a name="l00046"></a>00046 <span class="keyword">import</span> de.zib.adis.abi.ABIi;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="keyword">public</span> <span class="keyword">class </span>Main <span class="keyword">extends</span> ABI {
+<a name="l00049"></a>00049     @Parameter( names = { <span class="stringliteral">&quot;--baseurl&quot;</span>, <span class="stringliteral">&quot;-b&quot;</span> }, description = <span class="stringliteral">&quot;Base URL of VolD database&quot;</span>, required = true )
+<a name="l00050"></a>00050     <span class="keyword">private</span> String voldURL;
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052     @Parameter( names = { <span class="stringliteral">&quot;--grid&quot;</span>, <span class="stringliteral">&quot;-g&quot;</span> }, description = <span class="stringliteral">&quot;Grid name&quot;</span> )
+<a name="l00053"></a>00053     <span class="keyword">private</span> String grid = <span class="stringliteral">&quot;c3grid&quot;</span>;
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055     @Parameter( names = { <span class="stringliteral">&quot;--enc&quot;</span>, <span class="stringliteral">&quot;-e&quot;</span> }, description = <span class="stringliteral">&quot;Encoding&quot;</span> )
+<a name="l00056"></a>00056     <span class="keyword">private</span> String enc = <span class="stringliteral">&quot;utf-8&quot;</span>;
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058     <span class="keyword">private</span> Main( ABIi iface, String[] args ) {
+<a name="l00059"></a>00059         super( iface, args );
+<a name="l00060"></a>00060     }
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062     <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> main( String[] args ) {
+<a name="l00063"></a>00063         Adis adis = <span class="keyword">new</span> Adis();
+<a name="l00064"></a>00064         Main main = <span class="keyword">new</span> Main( adis, args );
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066         adis.setVoldURL( main.voldURL );
+<a name="l00067"></a>00067         adis.setEnc( main.enc );
+<a name="l00068"></a>00068         adis.setGrid( main.grid );
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070         main.invoke();
+<a name="l00071"></a>00071     }
+<a name="l00072"></a>00072 }
 </pre></div></div>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><b>Main.java</b>      </li>
-      <li class="footer">Generated on Wed Dec 14 2011 13:27:41 for ADiS by&#160;
+      <li class="footer">Generated on Wed Dec 14 2011 14:17:45 for ADiS by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
     </ul>

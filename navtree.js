@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "ADiS", "index.html", [
+    [ "ADiS - Advanced Discovery Service", "index.html", null ],
     [ "Class List", "annotated.html", [
       [ "de.zib.adis.Adis", "d7/d49/classde_1_1zib_1_1adis_1_1Adis.html", null ]
     ] ],

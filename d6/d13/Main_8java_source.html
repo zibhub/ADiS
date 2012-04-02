@@ -90,6 +90,7 @@
 <a name="l00013"></a>00013 <span class="comment"> * limitations under the License.</span>
 <a name="l00014"></a>00014 <span class="comment"> */</span>
 <a name="l00015"></a>00015 
+<<<<<<< HEAD
 <a name="l00041"></a>00041 <span class="keyword">package </span>de.zib.adis;
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043 <span class="keyword">import</span> com.beust.jcommander.Parameter;
@@ -123,10 +124,46 @@
 <a name="l00071"></a>00071     }
 <a name="l00072"></a>00072 }
 </pre></div></div><!-- contents -->
+=======
+<a name="l00042"></a>00042 <span class="keyword">package </span>de.zib.adis;
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="keyword">import</span> com.beust.jcommander.Parameter;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="keyword">import</span> de.zib.adis.abi.ABI;
+<a name="l00047"></a>00047 <span class="keyword">import</span> de.zib.adis.abi.ABIi;
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="keyword">public</span> <span class="keyword">class </span>Main <span class="keyword">extends</span> ABI {
+<a name="l00050"></a>00050     @Parameter( names = { <span class="stringliteral">&quot;--baseurl&quot;</span>, <span class="stringliteral">&quot;-b&quot;</span> }, description = <span class="stringliteral">&quot;Base URL of VolD database&quot;</span>, required = true )
+<a name="l00051"></a>00051     <span class="keyword">private</span> String voldURL;
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053     @Parameter( names = { <span class="stringliteral">&quot;--grid&quot;</span>, <span class="stringliteral">&quot;-g&quot;</span> }, description = <span class="stringliteral">&quot;Grid name&quot;</span> )
+<a name="l00054"></a>00054     <span class="keyword">private</span> String grid = <span class="stringliteral">&quot;c3grid&quot;</span>;
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056     @Parameter( names = { <span class="stringliteral">&quot;--enc&quot;</span>, <span class="stringliteral">&quot;-e&quot;</span> }, description = <span class="stringliteral">&quot;Encoding&quot;</span> )
+<a name="l00057"></a>00057     <span class="keyword">private</span> String enc = <span class="stringliteral">&quot;utf-8&quot;</span>;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059     <span class="keyword">private</span> Main( ABIi iface, String[] args ) {
+<a name="l00060"></a>00060         super( iface, args );
+<a name="l00061"></a>00061     }
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063     <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> main( String[] args ) {
+<a name="l00064"></a>00064         Adis adis = <span class="keyword">new</span> Adis();
+<a name="l00065"></a>00065         Main main = <span class="keyword">new</span> Main( adis, args );
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067         adis.setVoldURL( main.voldURL );
+<a name="l00068"></a>00068         adis.setEnc( main.enc );
+<a name="l00069"></a>00069         adis.setGrid( main.grid );
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071         main.invoke();
+<a name="l00072"></a>00072     }
+<a name="l00073"></a>00073 }
+</pre></div></div>
+>>>>>>> 41d193b408d19884af6f826c71945c173a0b8661
 </div>
   <div id="nav-path" class="navpath">
     <ul>
       <li class="navelem"><b>Main.java</b>      </li>
+<<<<<<< HEAD
 
     <li class="footer">Generated on Mon Apr 2 2012 16:56:48 for ADiS by
     <a href="http://www.doxygen.org/index.html">
@@ -134,6 +171,13 @@
    </ul>
  </div>
 
+=======
+      <li class="footer">Generated on Wed Dec 14 2011 14:49:23 for ADiS by&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.7.3 </li>
+    </ul>
+  </div>
+>>>>>>> 41d193b408d19884af6f826c71945c173a0b8661
 
 </body>
 </html>

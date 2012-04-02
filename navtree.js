@@ -13,25 +13,7 @@ var NAVTREE =
     [ "Files", null, [
       [ "File List", "files.html", "files" ]
     ] ],
-<<<<<<< HEAD
     [ "Directories", "dirs.html", "dirs" ]
-=======
-    [ "Directories", "dirs.html", [
-      [ "src", "dir_754dfa5e1b0b9d1bec9d170015d15060.html", [
-        [ "main", "dir_eb7e699f41dc3656358be3ced4e526dd.html", [
-          [ "java", "dir_b7e76d87583f415be05090884d76f3e3.html", [
-            [ "de", "dir_f321318c00f3506171b3ab26c4125e7c.html", [
-              [ "zib", "dir_9ee78cf7893d6955b4c3df275aaacc65.html", [
-                [ "adis", "dir_41df285269eb963ef0044cbdeef2b97a.html", [
-                  [ "abi", "dir_6d8bf4d58eedc7eef643447e6d4c0a7f.html", null ]
-                ] ]
-              ] ]
-            ] ]
-          ] ]
-        ] ]
-      ] ]
-    ] ]
->>>>>>> 41d193b408d19884af6f826c71945c173a0b8661
   ] ]
 ];
 
